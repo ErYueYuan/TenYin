@@ -1,0 +1,120 @@
+page {
+  background: #F8F9FB;
+}
+
+.btn {
+  padding: 10rpx 0 60rpx 0;
+  border-top: 1rpx solid #EEEEEE;
+  width: 100%;
+  margin-top: 54rpx;
+}
+
+.save_btn {
+  width: 686rpx;
+  height: 94rpx;
+  line-height: 94rpx;
+  text-align: center;
+  background: #FF8301;
+  border-radius: 47rpx;
+  font-size: 36rpx;
+  color: #FFFFFF;
+  margin: 0 auto;
+}
+
+.music_item {
+  width: 626rpx;
+  height: auto;
+  background: #FFFFFF;
+  box-shadow: 0 2rpx 14rpx 0 rgba(62, 47, 152, 0.04);
+  border-radius: 12rpx;
+  margin: auto auto 24rpx auto;
+  padding: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  margin: 40rpx 0 32rpx 32rpx;
+  font-size: 28rpx;
+  color: #333333;
+}
+
+.sound {
+  width: 686rpx;
+  height: autp;
+  margin: 0 auto;
+  background: #FFFFFF;
+  box-shadow: 0 2rpx 14rpx 0 rgba(62, 47, 152, 0.04);
+  border-radius: 12rpx;
+  text-align: center;
+  padding: 56rpx 0 26rpx 0;
+}
+
+.sound image {
+  width: 160rpx;
+  height: 160rpx;
+  margin-top: 328rpx;
+}
+
+.record {
+  font-size: 38rpx;
+  color: #999999;
+  margin-bottom: 16rpx;
+}
+
+.time {
+  font-size: 50rpx;
+  color: #FF8301;
+}
+
+.music_logo {
+  width: 72rpx;
+  height: 72rpx;
+  margin-right: 45rpx;
+}
+
+.radio_img {
+  width: 34rpx;
+  height: 34rpx;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.mine_music_logo {
+  width: 90rpx;
+  height: 90rpx;
+  margin-right: 27rpx;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  color: #333333;
+}
+
+.name image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 19rpx;
+}
+
+.date {
+  font-size: 30rpx;
+  color: #999999;
+  margin-top: 12rpx;
+}
+
+.abc {
+  width: 686rpx;
+  height: 100rpx;
+  background: #fff;
+  margin: auto auto 40rpx auto;
+}
+
+@import "../../compoents/toast_text/toast.wxss";
+@import "../../compoents/toast_notice/toast.wxss";

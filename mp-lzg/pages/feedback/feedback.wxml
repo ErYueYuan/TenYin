@@ -1,0 +1,6 @@
+<include src="../../compoents/toast_text/toast.wxml" />
+<view class="title">反馈信息</view>
+<textarea class="content" maxlength="200" placeholder="请描述您对名片功能的意见和建议" value="{{content}}"  bindblur="writeBlur" bindinput="writeInput"></textarea>
+<view class="btn">
+  <view class="save_btn" bindtap="commit">提交</view>
+</view>

@@ -1,0 +1,59 @@
+page {
+  background: #F8F9FB;
+}
+
+.title {
+  font-size: 40rpx;
+  color: #333333;
+  margin: 48rpx 0 24rpx 32rpx;
+  font-weight: bold;
+}
+
+.content {
+  width: 632rpx;
+  height: 370rpx;
+  background: #FFFFFF;
+  font-size: 30rpx !important;
+  color: #999999;
+  border-radius: 12rpx;
+  padding: 24rpx 27rpx;
+  margin: auto auto 353rpx auto;
+  margin: 0 auto;
+}
+
+.commit {
+  width: 686rpx;
+  height: 94rpx;
+  line-height: 94rpx;
+  background: #FF8301;
+  border-radius: 47rpx;
+  font-size: 36rpx;
+  color: #FFFFFF;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.btn {
+  padding: 10rpx 0 60rpx 0;
+  border-top: 1rpx solid #EEEEEE;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.save_btn {
+  width: 686rpx;
+  height: 94rpx;
+  line-height: 94rpx;
+  text-align: center;
+  background: #FF8301;
+  border-radius: 47rpx;
+  font-size: 36rpx;
+  color: #FFFFFF;
+  margin: 0 auto;
+}
+
+
+
+
+@import "../../compoents/toast_text/toast.wxss";

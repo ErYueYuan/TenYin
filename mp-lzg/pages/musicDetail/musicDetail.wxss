@@ -1,0 +1,43 @@
+page {
+  background: #333333;
+}
+
+.play image {
+  width: 160rpx;
+  height: 160rpx;
+  display: flex;
+  margin: 334rpx auto 148rpx auto;
+}
+
+.title {
+  width: 100%;
+  font-size: 50rpx;
+  color: #FFFFFF;
+  margin: 100rpx 0;
+  text-align: center;
+  display: inline-block;
+}
+
+.logo image {
+  width: 130rpx;
+  height: 130rpx;
+  display: flex;
+  margin: 400rpx auto auto auto;
+}
+
+.progress-box {
+  width: 447rpx;
+  margin: 0 auto;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  padding: 0 32rpx;
+}
+
+.time {
+  font-size: 24rpx;
+  color: #FF8301;
+  display: inline-block;
+}

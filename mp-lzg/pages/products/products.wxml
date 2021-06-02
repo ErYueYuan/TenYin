@@ -1,0 +1,44 @@
+<include src="../../compoents/toast_text/toast.wxml" />
+<!-- <include src="../../compoents/toast_notice/toast.wxml" /> -->
+<view class="tab_title">
+	<view wx:for="{{navTab}}" wx:key="index" data-idx="{{index}}" data-id="{{item.id}}" bindtap="currentTab"
+		class="{{currentTab==index ? 'cur' : ''}}"><text>{{item.name}}</text></view>
+</view>
+
+<view class="page-section" style="background: #ffffff;">
+	<view class="weui-cells weui-cells_after-title">
+		<checkbox-group bindchange="checkboxChange">
+			<label class="weui-cell weui-check__label flex" wx:for="{{productList}}" wx:key="value" wx:for-index="index" wx:for-item="item">
+				<view class="products_item">
+					<view>
+						<image src="{{item.logoPath}}" mode="aspectFit" class="products_img"></image>
+					</view>
+					<view class="product_intro">
+						<view class="title">{{item.productName}}</view>
+						<view class="feature">{{item.feature}}</view>
+						<view class="smalltag"><!--wx:for="{{item.tags}}"-->
+							<view class="hot">热卖</view>
+							<view class="recommend">特色</view>
+						</view>
+						<view class="bottom">
+							<view class="price">¥{{item.prem}}起</view>
+							<view class="weui-cell__hd">
+								<checkbox color="#FF771B" value="{{item.id}}" checked="{{item.isSelected == 'Y'}}" />
+							</view>
+						</view>
+					</view>
+				</view>
+			</label>
+		</checkbox-group>
+	</view>
+</view>
+
+<!-- <view class="footbtn" bindtap="addProduct">
+	<image src="../../pages/images/add.png"></image>
+	<text>选择完成</text>
+</view> -->
+
+
+<view class="btn" bindtap="addProduct">
+	<view class="save_btn">选择完成</view>
+</view>

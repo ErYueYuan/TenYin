@@ -1,0 +1,9 @@
+/* pages/component/navbar/navbar.wxss */
+/* .navbar {
+  position: fixed;
+  top:0;
+  left: 0;
+  background: #000000;
+  height:33px;
+  z-index: 1000;
+} */

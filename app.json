@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/player/player",
+    "pages/my/my"
+  ],
+  "tabBar": {
+    "color":"#000000",
+    "selectedColor":"#e53d81",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "发现",
+        "iconPath": "pages/asstes/icon/1.png",
+        "selectedIconPath": "pages/asstes/icon/Home.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "pages/asstes/icon/2.png",
+        "selectedIconPath": "pages/asstes/icon/music.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "记录",
+        "iconPath": "pages/asstes/icon/3.png",
+        "selectedIconPath": "pages/asstes/icon/my.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "navbar": "/pages/component/navbar/navbar",
+    "footer": "/pages/component/footer/footer"
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "拾元音",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

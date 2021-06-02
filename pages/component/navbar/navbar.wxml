@@ -1,0 +1,11 @@
+<!--pages/component/navbar/navbar.wxml-->
+<view class="navbar">
+   <view class="navber-box">
+      <view class="box-icon1">
+         <van-icon name="arrow-left" />
+      </view>
+      <view class="box-icon2">
+         <van-icon name="replay" />
+      </view>
+   </view> 
+</view>

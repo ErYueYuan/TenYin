@@ -1,0 +1,25 @@
+<include src="../../compoents/toast_text/toast.wxml" />
+<include src="../../compoents/toast_notice/toast.wxml" />
+
+<view class="title">背景</view>
+<view class="pic">
+	<image wx:for="{{userVcBackgroundImageList}}" wx:key="index" wx:for-index="index" src="{{item.backgroundImage}}" bindtap="previewImage" data-id="{{item.id}}" data-src="{{item.backgroundImage}}"></image>
+</view>
+<view class="photos" bindtap="photos">
+	<view class="left">
+		<image src="https://upload-10051630.cos.ap-shanghai.myqcloud.com/static/userVc/dlrpic/photo.png" ></image>
+		<view class="text">从手机相册选择</view>
+	</view>
+	<view class="right">
+		<image src="https://upload-10051630.cos.ap-shanghai.myqcloud.com/static/userVc/dlrpic/right.png"></image>
+	</view>
+</view>
+<view class="camera" bindtap="camera">
+	<view class="left">
+		<image src="https://upload-10051630.cos.ap-shanghai.myqcloud.com/static/userVc/dlrpic/camera.png"></image>
+		<view class="text">拍一张</view>
+	</view>
+	<view class="right">
+		<image src="https://upload-10051630.cos.ap-shanghai.myqcloud.com/static/userVc/dlrpic/right.png"></image>
+	</view>
+</view>

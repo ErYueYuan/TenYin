@@ -1,0 +1,52 @@
+<!-- index.wxml -->
+<view class="container">
+  <view class="userinfo">
+    <swiper indicator-dots="true" indicator-color="rgba(255,255,255,.3)" indicator-active-color="#DD001B">
+      <swiper-item>
+        <image src="../asstes/image/2ymrzxqejio.jpg"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="../asstes/image/2ymrzxqejio.jpg"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="../asstes/image/2ymrzxqejio.jpg"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="yuan-menu">
+    <view class="menu-child">
+      <image class="img" src="../asstes/image/250.png"></image>
+      <text>每日推荐</text>
+    </view>
+    <view class="menu-child">
+      <image class="img" src="../asstes/image/a1iap11nnhb.jpg"></image>
+      <text>歌手</text>
+    </view>
+    <view class="menu-child">
+      <image class="img" src="../asstes/image/a1iap11nnhb.jpg"></image>
+      <text>类型</text>
+    </view>
+    <view class="menu-child">
+      <image class="img" src="../asstes/image/a1iap11nnhb.jpg"></image>
+      <text>排行榜</text>
+    </view>
+  </view>
+  <view class="motto">
+    <van-row gutter="10">
+      <van-col span="8" wx:for="{{[1, 2, 3, 4, 5, 6]}}" wx:key="index">
+        <view bind:tap="bindViewTap">
+          <view class="listen-img-box posi2">
+            <image src="../asstes/image/a1iap11nnhb.jpg"></image>
+            <view class="listen-total">
+              <view class="listen-txt">
+                <van-icon name="eye-o" /><text>10</text>
+              </view>
+            </view>
+          </view>
+          <view
+           class="motto-txt">那些喜欢到循环的歌曲</view>
+        </view>
+      </van-col>
+    </van-row>
+  </view>
+</view>

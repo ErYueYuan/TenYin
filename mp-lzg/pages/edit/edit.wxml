@@ -1,0 +1,120 @@
+<include src="../../compoents/toast_text/toast.wxml" />
+
+<view>
+	<view class="head">
+		<image src="{{head}}" class="head_img" bindtap="changeHeadImg" mode="aspectFit"></image>
+		<view class="head_title">上传个人形象照便于树立您的专业形象</view>
+	</view>
+	<view class="edit_item">
+		<view class="edit_tip flex_center">名片姓名<text>（必填）</text></view>
+		<input class="edit_content" placeholder="请输入您的姓名" value="{{userName}}" bindblur="nameBlur"></input>
+	</view>
+	<view class="edit_item">
+		<view class="edit_tip flex_center">名片联系电话<text>（必填）</text></view>
+		<input class="edit_content" type="number" placeholder="请输入您的电话号码" value="{{userMobile}}" bindblur="telBlur"></input>
+	</view>
+	<view class="edit_item">
+		<view class="edit_tip">个性签名</view>
+		<input maxlength="20" class="edit_content" placeholder="请输入个性签名20字以内" value="{{slogan}}"
+			bindblur="sloganBlur"></input>
+	</view>
+
+	<picker mode="selector" bindchange="bindSexChange" value="{{sex_index}}" data-sexid="{{sexList[sex_index].id}}"
+		range="{{sexList}}" range-key="name">
+		<view class="edit_item row_item">
+			<view>
+				<view class="edit_tip">性别</view>
+				<input disabled class="edit_content" placeholder="请选择" value="{{sexList[sex_index].name}}"></input>
+			</view>
+			<image src="https://upload-10051630.cos.ap-shanghai.myqcloud.com/static/userVc/dlrpic/right.png"></image>
+		</view>
+	</picker>
+
+	<picker mode="date" value="{{date}}" end="{{currentDate}}" bindchange="bindDateChange">
+		<view class="edit_item row_item">
+			<view>
+				<view class="edit_tip">出生日期</view>
+				<input disabled class="edit_content" placeholder="请选择" value="{{birthday}}" bindtap=""></input>
+			</view>
+			<image src="https://upload-10051630.cos.ap-shanghai.myqcloud.com/static/userVc/dlrpic/right.png"></image>
+		</view>
+	</picker>
+
+	<!-- 未上传 -->
+	<view class="edit_item row_item" wx:if="{{!isUpload}}">
+		<view style="width: 70%;">
+			<view class="edit_tip">微信二维码</view>
+			<input disabled class="edit_content" placeholder="上传您的微信/企业微信二维码" value="" bindtap="chooseImg"></input>
+		</view>
+		<view class="add_code" bindtap="chooseImg">
+			<image src="https://upload-10051630.cos.ap-shanghai.myqcloud.com/static/userVc/dlrpic/tianjia.png"></image>
+		</view>
+	</view>
+	<!-- 已上传 -->
+	<view class="edit_item row_item" wx:if="{{isUpload}}">
+		<view style="width: 70%;">
+			<view class="edit_tip">微信二维码</view>
+			<text class="pretext ">微信二维码已上传</text>
+			<text class="reupload" bindtap="chooseImg">重新上传</text>
+		</view>
+		<view wx:for="{{imgs}}" wx:for-key="item" wx:for-index="id" wx:key="index" class="pre">
+			<image src="{{item}}" bindtap="previewImg" mode="aspectFit"></image>
+		</view>
+	</view>
+</view>
+
+<!-- 更换公司 -->
+<view class="edit_item row_item" style="display: none;">
+	<view bindtap="chooseCompany">
+		<view class="edit_tip">所属公司</view>
+		<input disabled="isDis" class="edit_content" placeholder="" value="{{companyName}}"></input>
+	</view>
+	<!--Selector遮罩-->
+	<view wx:if="{{showSelector}}"
+		style='position:fixed;width:100%;height:100%;background:rgba(0, 0, 0, 0.7);left:0px;bottom:0px;z-index:99' bindtap="closeCompanyMask">
+		<!--Banner-->
+		<view class="pickerBanner">
+			<view class='pickerNo' bindtap="cancelChoose">取消</view>
+			<view class='pickerTitle'>更换公司</view>
+			<view class='pickerOk' bindtap="closeCompanyMask">确定</view>
+		</view>
+		<!--Picker-->
+		<picker-view indicator-style="height: 50px;"
+			style="width: 100%; height: 45%;position:absolute;bottom:0px;text-align:center;background:white"
+			value="{{companyValue}}" bindchange="bindComapnyChange">
+			<!--Columns-->
+			<picker-view-column>
+				<view wx:for="{{userVcCompanyList}}" wx:key="company_index" wx:for-index="company_index" wx:for-item="item" class="column_item">{{item.companyName}}
+				</view>
+			</picker-view-column>
+		</picker-view>
+	</view>
+</view>
+
+<view class="edit_item">
+	<view class="edit_tip">所属公司</view>
+	<input disabled class="edit_content" placeholder="" value="{{companyName}}"></input>
+</view>
+<view class="edit_item">
+	<view class="edit_tip">职级</view>
+	<input disabled class="edit_content" placeholder="" value="{{userVc.userTitle}}"></input>
+</view>
+<view class="edit_item">
+	<view class="edit_tip">工号</view>
+	<input disabled class="edit_content" placeholder="" value="{{userVc.agentCode}}"></input>
+</view>
+
+<view class="edit_item" style="margin-bottom: 100rpx;">
+	<view class="edit_tip">公司简介</view>
+	<view class="experience_content">
+		<view class="content">{{companyContent}}</view>
+		<view class="open_button" bindtap="companyDetail">
+			查看全部
+			<image src="https://upload-10051630.cos.ap-shanghai.myqcloud.com/static/userVc/dlrpic/right.png"></image>
+		</view>
+	</view>
+</view>
+
+<view class="btn">
+	<view class="save_btn" bindtap="saveInfo">保存</view>
+</view>

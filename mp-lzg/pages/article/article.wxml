@@ -1,0 +1,28 @@
+<include src="../../compoents/toast_text/toast.wxml" />
+<!-- <include src="../../compoents/toast_notice/toast.wxml" /> -->
+<view class="page-section">
+	<view class="weui-cells weui-cells_after-title">
+		<checkbox-group bindchange="checkboxChange">
+			<label class="weui-cell weui-check__label flex" wx:for="{{lmArticleList}}" wx:key="value" wx:for-index="index" wx:for-item="item">
+				<!-- 内容 -->
+				<view class="article_item">
+					<view class="left">
+						<view class="title">{{item.title}}</view>
+						<view class="read">阅读 {{item.readCount}}</view>
+					</view>
+					<view class="right">
+						<image src="{{item.coverImage}}"></image>
+					</view>
+				</view>
+				<!-- 勾选框 -->
+				<view class="weui-cell__hd" style="width: 32rpx;">
+					<checkbox color="#FF771B" value="{{item.id}}" checked="{{item.isSelection == 'Y'}}" />
+				</view>
+			</label>
+		</checkbox-group>
+	</view>
+</view>
+
+<view class="btn" bindtap="addArticle">
+	<view class="save_btn">选择完成</view>
+</view>

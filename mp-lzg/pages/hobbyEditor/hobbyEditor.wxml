@@ -1,0 +1,61 @@
+<include src="../../compoents/toast_text/toast.wxml" />
+
+<view class="box">
+	<view class="top">
+		<view class="title">我的爱好</view>
+	</view>
+	<!-- <view class="bottom">
+		<block wx:for="{{selectList}}" wx:key="index" wx:for-index="index" wx:if="{{selectList.length > 0}}">
+			<view class="hobby_item" id="{{item.index}}" data-index="{{index}}" data-value="{{item.id}}"
+				data-name="{{item.className}}" bindtap="delLabel">{{item.className}}
+				<image src="https://upload-10051630.cos.ap-shanghai.myqcloud.com/static/userVc/dlrpic/edit_del.png"></image>
+			</view>
+		</block>
+		<view class="empty" wx:if="{{selectList.length == 0}}">
+			<text>您还没有选择爱好哦~点击下面的更多爱好快速添加吧！</text>
+		</view>
+	</view> -->
+	<view class="bottom">
+		<scroll-view scroll-y="true" wx:if='{{selectList.length > 0}}'>
+			<view class="myhobby">
+				<block wx:for="{{selectList}}" wx:key="index" wx:for-index="index" wx:if="{{selectList.length > 0}}">
+					<view class="hobby_item" id="{{item.index}}" data-index="{{index}}" data-value="{{item.id}}"
+						data-name="{{item.className}}" bindtap="delLabel">{{item.className}}
+						<image src="https://upload-10051630.cos.ap-shanghai.myqcloud.com/static/userVc/dlrpic/edit_del.png"></image>
+					</view>
+				</block>
+			</view>
+		</scroll-view>
+		<view class="empty" wx:if="{{selectList.length == 0}}">
+			<text>您还没有选择爱好哦~点击下面的更多爱好快速添加吧！</text>
+		</view>
+	</view>
+</view>
+
+<!-- 更多爱好 -->
+<view class="box">
+	<view class="top">
+		<view class="title">更多爱好<text>(点击添加爱好哦）</text></view>
+	</view>
+	<scroll-view scroll-y="true" wx:if='{{userVcHobbyList.length > 0}}'>
+		<view class="bottom" style="height: 550rpx;">
+			<block wx:for="{{userVcHobbyList}}" wx:key="index" wx:for-index="index">
+				<view class="{{item.isSelected == 1 ? 'hobby_item':'add_item'}}" id="{{item.id}}" data-id="{{item.id}}"
+					data-class-Name="{{item.className}}" data-index="{{index}}" data-isSelected="{{item.isSelected}}"
+					bindtap="addLabel">{{item.className}}
+					<image src="https://upload-10051630.cos.ap-shanghai.myqcloud.com/static/userVc/dlrpic/edit_add.png"></image>
+				</view>
+			</block>
+		</view>
+	</scroll-view>
+	<view class="empty" wx:if="{{userVcHobbyList.length == 0}}">
+		<text>暂无更多爱好可供选择~</text>
+	</view>
+</view>
+
+
+
+<!-- 按钮 -->
+<view class="btn">
+	<view class="save_btn" bindtap="save">保存</view>
+</view>

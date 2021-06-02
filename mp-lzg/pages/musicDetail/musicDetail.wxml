@@ -1,0 +1,14 @@
+<view class="logo">
+	<image src="https://upload-10051630.cos.ap-shanghai.myqcloud.com/static/userVc/dlrpic/playing.png" class="logo"></image>
+</view>
+<view class="title">{{name}}</view>
+<view class="progress">
+	<view class="time">00:06</view>
+	<view class="progress-box">
+		<progress percent="40" active stroke-width="3" activeColor="#FF8301" />
+	</view>
+	<view class="time">00:16</view>
+</view>
+<view class="play">
+	<image src="https://upload-10051630.cos.ap-shanghai.myqcloud.com/static/userVc/dlrpic/play.png"></image>
+</view>

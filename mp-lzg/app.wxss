@@ -1,0 +1,47 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+input {
+  outline: none;
+  border: none;
+  list-style: none;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+}
+
+button::after {
+  border: none;
+}
+
+.button-hover {
+  color: #000;
+  background-color: rgb(247, 247, 247);
+}
+
+.flex_center {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+
+.flex_between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.no {
+  display: none;
+}

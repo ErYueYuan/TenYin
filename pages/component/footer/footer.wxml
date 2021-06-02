@@ -1,0 +1,30 @@
+<!--pages/component/footer/footer.wxml-->
+<view class="footer-box">
+  <view class="footer-child">
+    <view class="footer-icon">
+      <van-icon name="wap-home-o" />
+    </view>
+    <view class="footer-title">
+      <slot name="one"></slot>
+      发现
+    </view>
+  </view>
+  <view class="footer-child">
+    <view class="footer-icon">
+      <van-icon name="like-o" />
+    </view>
+    <view class="footer-title">
+      <slot name="two"></slot>
+      我的
+    </view>
+  </view>
+  <view class="footer-child">
+    <view class="footer-icon">
+      <van-icon name="todo-list-o" />
+    </view>
+    <view class="footer-title">
+      <slot name="three"></slot>
+      记录
+    </view>
+  </view>
+</view>

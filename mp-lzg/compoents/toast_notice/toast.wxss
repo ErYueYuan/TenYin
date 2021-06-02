@@ -1,0 +1,429 @@
+/* 遮罩层 */
+.mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 9000;
+}
+
+/* 弹出层 */
+.modalDlg {
+  width: 75%;
+  position: fixed;
+  top: 280rpx;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 16rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 弹出层里面的图片 */
+.modalDlg image {
+  width: 120px;
+  height: 120px;
+  margin-top: 30px;
+}
+
+/* 弹出层里面的按钮 */
+.ok {
+  width: 100%;
+  text-align: center;
+  color: #FF8C00;
+  font-size: 36rpx;
+  padding: 24rpx 0;
+  border-top: 1rpx solid #E5E5E5;
+}
+
+/* 弹出层里面的文字 */
+.modal_text {
+  text-align: justify;
+  font-size: 30rpx;
+  color: #333333;
+  width: 92%;
+  margin-bottom: 164rpx;
+  line-height: 42rpx;
+}
+
+/* 弹出层里面的标题 */
+.modal_title {
+  font-size: 36rpx;
+  color: #333333;
+  text-align: center;
+  margin: 40rpx 0 32rpx 0;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+/* 音乐名称弹框 */
+.music_modal {
+  width: 560rpx;
+  height: auto;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.80);
+  border-radius: 16rpx;
+  position: fixed;
+  top: 350rpx;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.music_modal_title {
+  font-size: 36rpx;
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 32rpx;
+}
+
+.music_modal_text input {
+  font-size: 30rpx;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.music_placeholder {
+  font-size: 30rpx;
+  color: rgba(255, 255, 255, 0.70);
+  text-align: center;
+}
+
+.music_top {
+  width: 100%;
+  padding: 40rpx 0;
+  border-bottom: 1rpx solid #E5E5E5;
+}
+
+.music_btn_cancel {
+  font-size: 36rpx;
+  color: rgba(255, 255, 255, 0.70);
+  text-align: center;
+  border-right: 1rpx solid #E5E5E5;
+  width: 49%;
+  display: inline-block;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.music_btn_ok {
+  font-size: 36rpx;
+  color: #FFFFFF;
+  text-align: center;
+  width: 50%;
+  display: inline-block;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.doubt_modal {
+  width: 560rpx;
+  height: auto;
+  margin: 0 auto;
+  background: #FFFFFF;
+  border-radius: 16rpx;
+  position: fixed;
+  top: 400rpx;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.doubt_modal_title {
+  padding: 40rpx 0;
+  font-size: 30rpx;
+  color: #333333;
+  text-align: center;
+  border-bottom: 1rpx solid #E5E5E5;
+}
+
+.doubt_btn_cancel {
+  font-size: 36rpx;
+  color: #999999;
+  text-align: center;
+  border-right: 1rpx solid #E5E5E5;
+  width: 49%;
+  display: inline-block;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.doubt_btn_ok {
+  font-size: 36rpx;
+  color: #FF8301;
+  text-align: center;
+  width: 50%;
+  display: inline-block;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.disable_modal {
+  width: 560rpx;
+  height: auto;
+  margin: 0 auto;
+  background: #FFFFFF;
+  border-radius: 16rpx;
+  position: fixed;
+  top: 400rpx;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.disable_top {
+  width: 100%;
+  padding: 40rpx 0;
+  border-bottom: 1rpx solid #E5E5E5;
+  text-align: center;
+}
+
+.disable_modal_title {
+  font-size: 36rpx;
+  color: #333333;
+  margin-bottom: 32rpx;
+}
+
+.disable_modal_text {
+  font-size: 30rpx;
+  color: #333333;
+  margin: 0 24rpx;
+}
+
+.disable_btn {
+  font-size: 36rpx;
+  color: #FF8301;
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.close_img {
+  width: 44rpx;
+  height: 44rpx;
+  display: block;
+  margin: 40rpx auto auto auto;
+}
+
+.qrcode_modal {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  position: fixed;
+  top: 500rpx;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.qrcode_top {
+  width: 400rpx;
+  height: auto;
+  background: #FFFFFF;
+  border-radius: 15rpx 15rpx 12rpx 12rpx;
+  padding: 32rpx;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.qrcode_modal_text {
+  font-size: 30rpx;
+  color: #000000;
+  margin-top: 14rpx;
+}
+
+.qrcode_img {
+  width: 100%;
+  height: 400rpx !important;
+}
+
+.poster_modal {
+  width: 630rpx;
+  height: auto;
+  margin: 0 auto;
+  position: fixed;
+  top: 280rpx;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.poster_top {
+  width: 630rpx;
+  height: auto;
+  background: #FFFFFF;
+  border-radius: 15rpx 15rpx 12rpx 12rpx;
+}
+
+.poster_bgimg {
+  width: 100%;
+  height: 355rpx;
+  border-radius: 15rpx 15rpx 0 0;
+}
+
+.poster_info {
+  height: auto;
+  padding: 20rpx 37rpx 43rpx 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.poster_info_right {
+  font-size: 22rpx;
+  color: #999999;
+  text-align: center;
+}
+
+.aa {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.bb {
+  display: flex;
+  flex-direction: column;
+}
+
+.poster_headimg {
+  width: 108rpx;
+  height: 108rpx;
+  margin-right: 12rpx;
+  border-radius: 50%;
+}
+
+.poster_name {
+  font-size: 30rpx;
+  color: #333333;
+  margin-bottom: 8rpx;
+}
+
+.poster_company {
+  font-size: 24rpx;
+  color: #666666;
+  margin-bottom: 4rpx;
+  width: 300rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.poster_tel {
+  font-size: 24rpx;
+  color: #666666;
+  width: 300rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.poster_wechatimg {
+  width: 118rpx;
+  height: 118rpx;
+  margin-bottom: 4rpx;
+}
+
+.poster_btn {
+  width: 387rpx;
+  height: 94rpx;
+  line-height: 94rpx;
+  background: #FF8301;
+  border-radius: 47rpx;
+  text-align: center;
+  font-size: 36rpx;
+  color: #FFFFFF;
+  margin: 160rpx 0 0 122rpx;
+}
+
+.openSetting {
+  background: #FF8301;
+  border-radius: 47rpx;
+  text-align: center;
+  font-size: 36rpx;
+  color: #FFFFFF;
+  padding: 0;
+  font-weight: normal;
+  position: relative;
+  bottom: 75rpx;
+  opacity: 0;
+}
+
+.pre {
+  width: 100%;
+  height: 422rpx;
+  margin-top: 134rpx;
+}
+
+.pre image {
+  width: 100%;
+  height: 100%;
+  border: 1rpx solid;
+}
+
+.btn {
+  /* border-top: 1rpx solid #EEEEEE; */
+}
+
+.savebtn {
+  width: 686rpx;
+  height: 94rpx;
+  line-height: 94rpx;
+  text-align: center;
+  background: #FF8301;
+  border-radius: 47rpx;
+  font-size: 36rpx;
+  color: #FFFFFF;
+  margin: 135rpx auto auto auto;
+}
+
+.load_mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #FFFFFF;
+}
+
+.load_modal {
+  width: 200rpx;
+  height: auto;
+  margin: 0 auto;
+  position: fixed;
+  top: 300rpx;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.load_top {
+  width: 100%;
+  height: auto;
+  background: rgba(0, 0, 0, .5);
+  border-radius: 15rpx 15rpx 12rpx 12rpx;
+  padding: 32rpx;
+  text-align: center;
+}
+
+.load_text {
+  font-size: 30rpx;
+  color: #fff;
+}
+
+.loading_img {
+  width: 160rpx;
+  height: 160rpx;
+}

@@ -1,0 +1,10 @@
+{
+  "name": "wechatP",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "YiMing <45221582+MyTenstep@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@vant/weapp": "^1.6.8"
+  }
+}
