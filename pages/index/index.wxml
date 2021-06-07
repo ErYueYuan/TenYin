@@ -1,40 +1,31 @@
 <!-- index.wxml -->
 <view class="container">
+  <van-search value="{{ value }}" shape="round" placeholder="请输入歌名，歌手" />
   <view class="userinfo">
-    <swiper indicator-dots="true" indicator-color="rgba(255,255,255,.3)" indicator-active-color="#DD001B">
-      <swiper-item>
-        <image src="../asstes/image/2ymrzxqejio.jpg"></image>
+    <swiper indicator-dots="true" indicator-color="rgba(255,255,255,.3)" indicator-active-color="#DD001B"
+      previous-margin="10" next-margin="10">
+      <swiper-item class="t-center">
+        <view class="box">
+          <image src="../asstes/image/2ymrzxqejio.jpg"></image>
+        </view>
       </swiper-item>
-      <swiper-item>
-        <image src="../asstes/image/2ymrzxqejio.jpg"></image>
+      <swiper-item class="t-center">
+        <view class="box">
+          <image src="../asstes/image/2ymrzxqejio.jpg"></image>
+        </view>
       </swiper-item>
-      <swiper-item>
-        <image src="../asstes/image/2ymrzxqejio.jpg"></image>
+      <swiper-item class="t-center">
+        <view class="box">
+          <image src="../asstes/image/2ymrzxqejio.jpg"></image>
+        </view>
       </swiper-item>
     </swiper>
   </view>
-  <view class="yuan-menu">
-    <view class="menu-child">
-      <image class="img" src="../asstes/image/250.png"></image>
-      <text>每日推荐</text>
-    </view>
-    <view class="menu-child">
-      <image class="img" src="../asstes/image/a1iap11nnhb.jpg"></image>
-      <text>歌手</text>
-    </view>
-    <view class="menu-child">
-      <image class="img" src="../asstes/image/a1iap11nnhb.jpg"></image>
-      <text>类型</text>
-    </view>
-    <view class="menu-child">
-      <image class="img" src="../asstes/image/a1iap11nnhb.jpg"></image>
-      <text>排行榜</text>
-    </view>
-  </view>
   <view class="motto">
-    <van-row gutter="10">
-      <van-col span="8" wx:for="{{[1, 2, 3, 4, 5, 6]}}" wx:key="index">
-        <view bind:tap="bindViewTap">
+  <view class="motto-head"> 推荐歌单</view>
+    <swiper previous-margin="0" next-margin="20" display-multiple-items="2.6">
+      <swiper-item wx:for="{{[1, 2, 3, 4, 5, 6]}}" wx:key="index">
+        <view bind:tap="bindViewTap" class="motto-box">
           <view class="listen-img-box posi2">
             <image src="../asstes/image/a1iap11nnhb.jpg"></image>
             <view class="listen-total">
@@ -43,10 +34,39 @@
               </view>
             </view>
           </view>
-          <view
-           class="motto-txt">那些喜欢到循环的歌曲</view>
+          <view class="motto-txt">那些喜欢到循环的歌曲</view>
         </view>
-      </van-col>
-    </van-row>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="recommend">
+     <view class="recommed-child">
+       <view class="t-index">1</view>
+       <view class="t-name t-left">名称<text class="t-smallN f4 c3">-姓名</text></view>
+       <view class="t-image t-right">
+       <image bind:tap="player" src="../asstes/icon/bofang.png"></image>
+       </view>
+     </view>
+     <view class="recommed-child">
+       <view class="t-index">1</view>
+       <view class="t-name t-left">名称<text class="t-smallN f4 c3">-姓名</text></view>
+       <view class="t-image t-right">
+       <image src="../asstes/icon/bofang.png"></image>
+       </view>
+     </view>
+     <view class="recommed-child">
+       <view class="t-index">1</view>
+       <view class="t-name t-left">名称<text class="t-smallN f4 c3">-姓名</text></view>
+       <view class="t-image t-right">
+       <image src="../asstes/icon/bofang.png"></image>
+       </view>
+     </view>
+     <view class="recommed-child">
+       <view class="t-index">1</view>
+       <view class="t-name t-left">名称<text class="t-smallN f4 c3">-姓名</text></view>
+       <view class="t-image t-right">
+       <image src="../asstes/icon/bofang.png"></image>
+       </view>
+     </view>
   </view>
 </view>

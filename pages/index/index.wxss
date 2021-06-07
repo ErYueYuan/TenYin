@@ -2,15 +2,23 @@
 image {
   width: 100%;
 }
-.userinfo,
-swiper {
+.userinfo {
   height: 400rpx;
   width: 100%;
+  margin: 0 auto;
+}
+.userinfo swiper {
+  height: 100%;
+}
+.userinfo .box {
+  width: 96%;
+  height: 100%;
   margin: 0 auto;
 }
 .userinfo image {
   height: 100%;
   width: 100%;
+  border-radius: 20rpx;
 }
 .userinfo-avatar {
   width: 128rpx;
@@ -28,7 +36,10 @@ swiper {
   margin-top: 50rpx;
   padding: 30rpx 15rpx;
   border-radius: 30rpx 30rpx 0 0;
-  box-shadow: 0 10rpx 30rpx 20rpx #cccccc;
+}
+.motto .motto-head {
+  padding: 30rpx;
+  font-size: 40rpx;
 }
 .motto image {
   width: 100%;
@@ -102,4 +113,26 @@ swiper {
 }
 .title-container view {
   flex: 1;
+}
+.motto-box {
+  width: 95%;
+}
+.recommend {
+  padding: 20rpx 50rpx;
+}
+.recommend .recommed-child {
+  margin-bottom: 20rpx;
+  display: flex;
+}
+.recommend .recommed-child view {
+  flex: 1;
+  line-height: 70rpx;
+}
+.recommend .recommed-child .t-image {
+  text-align: right;
+}
+.recommend .recommed-child image {
+  width: 70rpx;
+  height: 70rpx;
+  vertical-align: middle;
 }

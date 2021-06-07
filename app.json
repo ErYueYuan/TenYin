@@ -33,6 +33,7 @@
     "van-icon": "@vant/weapp/icon/index",
     "van-row": "@vant/weapp/row/index",
     "van-col": "@vant/weapp/col/index",
+    "van-search":"@vant/weapp/search/index",
     "navbar": "/pages/component/navbar/navbar",
     "footer": "/pages/component/footer/footer"
   },

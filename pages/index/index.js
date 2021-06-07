@@ -9,12 +9,31 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     BarHeight: 0,
-    stateBarHeight: 0
+    stateBarHeight: 0,
+    playData:{
+      second:0,
+      playState:false,
+      audioIndex:0
+    }
   },
   // 事件处理函数
   bindViewTap() {
     wx.navigateTo({
       url: '/pages/player/player?user=1&id=0'
+    })
+  },
+  //播放音频
+  player(){
+    console.log('播放音频');
+   let audioManger=  wx.getBackgroundAudioManager();
+   audioManger.onPlay((res)=>{
+     console.log(res);
+   })
+   console.log(audioManger);
+    wx.playBackgroundAudio({
+      dataUrl: '',
+      title: '',
+      coverImgUrl: ''
     })
   },
   back() {
