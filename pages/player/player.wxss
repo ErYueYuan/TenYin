@@ -1,1 +1,29 @@
-/* pages/player/player.wxss */
+.player-headBox {
+  width: 100%;
+  min-height: 100rpx;
+  background-color: #3c374a;
+  padding: 30rpx;
+  border-radius: 0 0 10% 3%;
+  display: flex;
+}
+.player-headBox image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+}
+.player-headBox .headBox-title {
+  padding: 30rpx;
+  color: #ffffff;
+}
+.player-headBox .headBox-title .title-one {
+  font-size: 36rpx;
+}
+.player-headBox .headBox-title .title-two {
+  margin: 40rpx 0 20rpx 0;
+  font-size: 24rpx;
+  color: #cccccc;
+}
+.player-headBox .headBox-title .title-three {
+  font-size: 24rpx;
+  color: #cccccc;
+}

@@ -24,17 +24,13 @@ Page({
   },
   //播放音频
   player(){
-    console.log('播放音频');
-   let audioManger=  wx.getBackgroundAudioManager();
-   audioManger.onPlay((res)=>{
-     console.log(res);
-   })
-   console.log(audioManger);
-    wx.playBackgroundAudio({
-      dataUrl: '',
-      title: '',
-      coverImgUrl: ''
-    })
+     wx.request({
+       url: 'http://localhost:3000/users',
+       method:'GET',
+       success(res){
+         console.log(res);
+       }
+     })
   },
   back() {
     wx.navigateBack({
