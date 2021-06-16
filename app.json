@@ -40,7 +40,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ffffff",
-    "navigationBarTitleText": "拾元音",
+    "navigationBarTitleText": "拾音",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json"
