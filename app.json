@@ -35,7 +35,9 @@
     "van-col": "@vant/weapp/col/index",
     "van-search":"@vant/weapp/search/index",
     "navbar": "/pages/component/navbar/navbar",
-    "footer": "/pages/component/footer/footer"
+    "footer": "/pages/component/footer/footer",
+    "music":"/pages/component/music/music",
+    "audio":"/pages/component/audio/audio"
   },
   "window": {
     "backgroundTextStyle": "light",

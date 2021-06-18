@@ -1,0 +1,28 @@
+<!--pages/component/audio/audio.wxml-->
+<view class="audio-container">
+<!-- //左边为 -->
+   <view class="audio-img posi2">
+    <image src="../../asstes/image/a1iap11nnhb.jpg" class="audio-head"></image>
+   <!-- //播放 -->
+    <view class="audio-play icons" bind:tap="play" wx:if="status">
+      <image src="../../asstes/icon/bofang.png" />
+    </view>
+    <!-- //停止 -->
+    <!-- <view class="audio-pauce icons" wx:if="!status">
+       <image src="../../asstes/icon/bofang.png" />
+    </view> -->
+   </view>
+
+
+   <!-- //右边为进度条 -->
+   <!-- //歌曲名字 -->
+   <view class="audio-progress">
+      <view class="audio-name">
+         Liu-Later
+      </view>
+      <view class="audio-gress">
+        <view class="gress-outLine"> 
+        </view>
+      </view>
+   </view>
+</view>
