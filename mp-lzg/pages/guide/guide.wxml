@@ -1,6 +1,0 @@
-<image src="https://upload-10051630.cos.ap-shanghai.myqcloud.com/static/userVc/dlrpic/guide.png" class="guideimg"></image>
-<view class="title">【小懒保名片】</view>
-<view class="feature">助力您的每一次商务社交</view>
-<view class="btnbox" ><!-- wx:if="{{!!isShow}}" -->
-	<button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="btn">授权登录查看名片</button>
-</view>

@@ -15,9 +15,13 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    index:0,
+    status:true,
+    list:""
   },
-
+  attached(){
+    this.getData();
+  },
   /**
    * 组件的方法列表
    */
@@ -29,13 +33,20 @@ Component({
         console.log(1);
       });
       console.log(m);
-      wx.request({
-        url: 'http://localhost:3000/users',
-        method:'GET',
-        success(res){
-          console.log(res);
-        }
-      })
+   
    },
+   getData(){
+     let that = this;
+    wx.request({
+      url: 'http://localhost:3000/getMusic',
+      method:'GET',
+      success(res){
+        console.log(res);
+        that.setData({
+          list:res
+        })
+      }
+    })
+   }
   }
 })

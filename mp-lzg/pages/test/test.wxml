@@ -1,8 +1,0 @@
-<view>
-  <text bindtap="chooseImg">上传图片</text>
-</view>
-<view>
-  <view wx:for="{{imgs}}" wx:for-key="item" wx:for-index="id">
-    <image src="{{item}}" bindtap="previewImg"></image>
-  </view>
-</view>
