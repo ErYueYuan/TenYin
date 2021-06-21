@@ -1,17 +1,23 @@
+.posi2 {
+        position: relative;
+}
 .audio-container {
-        border-radius: 100rpx;
         background: #ffffff;
         height: 90rpx;
-        width:600rpx;
-        padding: 15rpx 40rpx;
+        width: 100%;
+        padding: 10rpx 100rpx;
         position: fixed;
         bottom: 0;
         left: 50%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
         transform: translateX(-50%);
-        border: 2rpx solid #990e0e;
+        border-top: 2rpx solid #d6d1d1;
         .audio-img {
                 float: left;
-                width: 100rpx;
+                margin-left: 40rpx;
+                width: 90rpx;
                 height: 100%;
                 position: relative;
                 .icons {
@@ -35,5 +41,22 @@
         .audio-progress {
                 float: left;
                 margin-left:20rpx;
+                .audio-name {
+                        text {
+                                flex: 1;
+                        }
+                        .m1 {
+                                font-size: 30rpx;
+                        }
+                        .m2 {
+                                color: #cccccc;
+                                font-size: 26rpx;
+                        }
+                }
+        }
+        .audio-change {
+                padding: 0 50rpx;
+                flex-grow: 5;
+                text-align: right;
         }
 }

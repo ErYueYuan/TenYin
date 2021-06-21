@@ -25,10 +25,13 @@ Component({
    */
   methods: {
     play(){
-      console.log(this.data.audioSrc);
+      console.log(this.data.audioSrc,this.data.status);
       vm.src= this.data.audioSrc
       vm.play();
-      console.log(vm);
+      this.setData({
+        status:false
+      })
+      console.log(vm,this.data.status);
       vm.onPause(() => {
         // 暂停监听
         
@@ -36,6 +39,12 @@ Component({
         
         });
     },
+    pause(){
+      vm.pause();
+      this.setData({
+        status:true
+      })
+    }
     
 
   }

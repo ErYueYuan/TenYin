@@ -1,5 +1,0 @@
-<include src="../../compoents/toast_text/toast.wxml" />
-
-<view class="company_pic">
-	<image mode="widthFix" src="{{companyImage}}"></image>
-</view>

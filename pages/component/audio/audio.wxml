@@ -1,28 +1,20 @@
 <!--pages/component/audio/audio.wxml-->
 <view class="audio-container">
-<!-- //左边为 -->
    <view class="audio-img posi2">
     <image src="../../asstes/image/a1iap11nnhb.jpg" class="audio-head"></image>
-   <!-- //播放 -->
-    <view class="audio-play icons" bind:tap="play" wx:if="status">
-      <image src="../../asstes/icon/bofang.png" />
-    </view>
-    <!-- //停止 -->
-    <!-- <view class="audio-pauce icons" wx:if="!status">
-       <image src="../../asstes/icon/bofang.png" />
-    </view> -->
    </view>
-
-
-   <!-- //右边为进度条 -->
-   <!-- //歌曲名字 -->
    <view class="audio-progress">
       <view class="audio-name">
-         Liu-Later
+        <text class="m1 f-left">杀死那个石家庄</text>
+        <text class="m2 f-left">-乐队</text>
       </view>
-      <view class="audio-gress">
-        <view class="gress-outLine"> 
-        </view>
-      </view>
+   </view>
+   <view class="audio-change ">
+    <view class="audio-play icons" bind:tap="play" wx:if="{{status}}">
+      <image src="../../asstes/icon/bofang.png" />
+    </view>
+    <view class="audio-pauce icons"  bindtap="pause" wx:else>
+       <image src="../../asstes/icon/ting.png" />
+    </view>
    </view>
 </view>

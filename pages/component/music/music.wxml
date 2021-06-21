@@ -4,7 +4,8 @@
        <view class="t-index">1</view>
        <view class="t-name t-left">名称<text class="t-smallN f4 c3">-姓名</text></view>
        <view class="t-image t-right">
-       <image bindtap="player" src="../../asstes/icon/bofang.png"></image>
+       <image bindtap="player"  wx:if="{{status}}" src="../../asstes/icon/bofang.png"></image>
+       <image bindtap="player" wx:else src="../../asstes/icon/ting.png"></image>
        </view>
      </view>
      <view class="recommed-child">
