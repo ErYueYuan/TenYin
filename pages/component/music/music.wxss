@@ -1,0 +1,20 @@
+/* pages/component/music/music.wxss */
+.recommend {
+  padding: 20rpx 50rpx;
+}
+.recommend .recommed-child {
+  margin-bottom: 20rpx;
+  display: flex;
+}
+.recommend .recommed-child view {
+  flex: 1;
+  line-height: 70rpx;
+}
+.recommend .recommed-child .t-image {
+  text-align: right;
+}
+.recommend .recommed-child image {
+  width: 70rpx;
+  height: 70rpx;
+  vertical-align: middle;
+}

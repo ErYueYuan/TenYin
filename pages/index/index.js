@@ -23,15 +23,7 @@ Page({
     })
   },
   //播放音频
-  player(){
-     wx.request({
-       url: 'http://localhost:3000/users',
-       method:'GET',
-       success(res){
-         console.log(res);
-       }
-     })
-  },
+ 
   back() {
     wx.navigateBack({
       delta: 1
