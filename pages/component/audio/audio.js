@@ -5,10 +5,7 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    audioSrcs:{
-      default:'http://121.196.46.103:8080/music/1.mp3',
-      type:String
-    }
+    data:Object
   },
 
   /**
