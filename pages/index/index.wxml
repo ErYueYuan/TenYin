@@ -40,5 +40,5 @@
     </swiper>
   </view>
 </view>
-<music></music>
-<audio></audio>
+<music bind:getMusic="musicData"></music>
+<audio  dataItem="{{data}}"></audio>
