@@ -14,7 +14,16 @@ Page({
       second:0,
       playState:false,
       audioIndex:0
+    },
+    data:{
+
     }
+  },
+  musicData(e){
+    console.log(e);
+    this.setData({
+      data:e.detail
+    })
   },
   // 事件处理函数
   bindViewTap() {

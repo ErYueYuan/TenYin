@@ -1,51 +1,75 @@
 // pages/component/audio/audio.js
 const vm = wx.createInnerAudioContext({});
+const  app = getApp();
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    audioSrcs:{
-      default:'http://121.196.46.103:8080/music/1.mp3',
-      type:String
+    dataItem: {
+      type: Object,
+      value: {},
+      observer: function (newVal, oldVal) {
+        return newVal;
+      }
     }
   },
 
+  attached() {
+
+  },
   /**
    * 组件的初始数据
    */
   data: {
-    status:true,
-    audioSrc:"http://121.196.46.103:8080/music/1.mp3"
+    musicData:'',
+    status: true,
+    audioSrc: "",
+    title:'',
+    name:'',
+    musicState:app.globalData.musicState
     
-  },
 
+  },
+  observers:{
+    'dataItem':function(val){
+      console.log(val);
+      this.play(val)
+    },
+  },
   /**
    * 组件的方法列表
    */
   methods: {
-    play(){
-      console.log(this.data.audioSrc,this.data.status);
-      vm.src= this.data.audioSrc
+    play(val) { 
+      console.log(this.data);
+      vm.src = val.url
       vm.play();
+      app.globalData.musicState = true;
+      console.log(app.globalData.musicState);
       this.setData({
-        status:false
+        status:false,
+        title:val.Content,
+        name:val.name
       })
-      console.log(vm,this.data.status);
+      console.log(this.data);
+      
       vm.onPause(() => {
+        this.setData({
+          status:true
+        })
         // 暂停监听
-        
         console.log('暂停播放!');
-        
-        });
+
+      });
     },
-    pause(){
+    pause() {
       vm.pause();
       this.setData({
-        status:true
+        status: true
       })
     }
-    
+
 
   }
 })

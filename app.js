@@ -44,6 +44,8 @@ App({
   },
   globalData: {
     userInfo: null,
-    BarHeight: 0
+    BarHeight: 0,
+    musicUrl:'',
+    musicState:false
   }
 })

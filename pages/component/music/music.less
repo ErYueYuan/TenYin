@@ -7,22 +7,23 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-}
-.recommend .recommed-child view {
-  flex: 1;
+  view {
+    flex: 1;
   line-height: 70rpx;
+  }
+  view:nth-child(1){
+    flex-grow: 1;
+  }
+  view:nth-child(2){
+    flex-grow: 5;
+  }
+  view:nth-child(3){
+    text-align: center;
+    flex-grow: 2;
+  }
 }
-.recommend .recommed-child view:nth-child(1) {
-  flex-grow: 1;
-}
-.recommend .recommed-child view:nth-child(2) {
-  flex-grow: 5;
-}
-.recommend .recommed-child view:nth-child(3) {
-  text-align: center;
-  flex-grow: 2;
-}
-.recommend .recommed-child .recommend .recommed-child .t-image {
+.recommend .recommed-child 
+.recommend .recommed-child .t-image {
   text-align: right;
 }
 .recommend .recommed-child image {
