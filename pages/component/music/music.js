@@ -24,7 +24,6 @@ Component({
     player(e){
       let item = e.currentTarget.dataset.item
       this.triggerEvent('getMusic',item)
-      console.log(item);
    },
    getData(){
      let that = this;
