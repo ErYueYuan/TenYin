@@ -1,2 +1,13 @@
 <!--pages/player/player.wxml-->
-<text>1</text>
+<view class="player-headBox">
+ <view class="headBox-img box-child">
+  <image src="../asstes/image/jkc1l0bcblm.jpg"></image>
+ </view>
+ <view class="headBox-title box-child">
+   <view class="title-one">那些歌词里的欲言又止</view>
+   <view class="title-two">昵称</view>
+   <view class="title-three">后语</view>
+ </view>
+</view>
+<music bind:getMusic="musicData"></music>
+<audio dataItem="{{data}}"></audio>

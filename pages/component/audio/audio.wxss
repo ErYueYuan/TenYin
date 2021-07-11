@@ -1,0 +1,77 @@
+.posi2 {
+  position: relative;
+}
+.audio-container {
+  background: #ffffff;
+  height: 90rpx;
+  width: 100%;
+  padding: 10rpx 100rpx;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transform: translateX(-50%);
+  border-top: 2rpx solid #d6d1d1;
+}
+.audio-container .audio-img {
+  float: left;
+  margin-left: 40rpx;
+  width: 90rpx;
+  height: 100%;
+  position: relative;
+}
+.audio-container .audio-img .icons {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.audio-container .audio-head {
+  height: 100%;
+  border-radius: 100%;
+}
+.audio-container .rotate-img {
+  animation: route 2s linear infinite ;
+}
+@keyframes route {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(90deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+  75% {
+    -webkit-transform: rotate(270deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+.audio-container .icons image {
+  width: 50rpx;
+  height: 50rpx;
+}
+.audio-container .audio-progress {
+  float: left;
+  margin-left: 20rpx;
+}
+.audio-container .audio-progress .audio-name text {
+  flex: 1;
+}
+.audio-container .audio-progress .audio-name .m1 {
+  font-size: 30rpx;
+}
+.audio-container .audio-progress .audio-name .m2 {
+  color: #cccccc;
+  font-size: 26rpx;
+}
+.audio-container .audio-change {
+  padding: 0 50rpx;
+  flex-grow: 5;
+  text-align: right;
+}

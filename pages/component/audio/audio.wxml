@@ -1,0 +1,20 @@
+<!--pages/component/audio/audio.wxml-->
+<view class="audio-container" wx:if="{{dataItem.url && musicState}}">
+   <view class="audio-img posi2">
+    <image src="../../asstes/image/a1iap11nnhb.jpg" class="audio-head {{status?'':'rotate-img'}}"></image>
+   </view>
+   <view class="audio-progress">
+      <view class="audio-name">
+        <text class="m1 f-left">{{title}}</text> 
+        <text class="m2 f-left">-{{name}}</text>
+      </view>
+   </view>
+   <view class="audio-change ">
+    <view class="audio-play icons" bind:tap="play" wx:if="{{status}}">
+      <image  src="../../asstes/icon/bofang.png" />
+    </view>
+    <view class="audio-pauce icons"  bindtap="pause"  wx:else>
+       <image src="../../asstes/icon/ting.png" />
+    </view>
+   </view>
+</view>

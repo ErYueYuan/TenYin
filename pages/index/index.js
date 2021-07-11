@@ -14,7 +14,16 @@ Page({
       second:0,
       playState:false,
       audioIndex:0
+    },
+    data:{
+
     }
+  },
+  musicData(e){
+    console.log(e);
+    this.setData({
+      data:e.detail
+    })
   },
   // 事件处理函数
   bindViewTap() {
@@ -23,19 +32,7 @@ Page({
     })
   },
   //播放音频
-  player(){
-    console.log('播放音频');
-   let audioManger=  wx.getBackgroundAudioManager();
-   audioManger.onPlay((res)=>{
-     console.log(res);
-   })
-   console.log(audioManger);
-    wx.playBackgroundAudio({
-      dataUrl: '',
-      title: '',
-      coverImgUrl: ''
-    })
-  },
+ 
   back() {
     wx.navigateBack({
       delta: 1
