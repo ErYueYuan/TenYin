@@ -5,9 +5,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-     
+     show:false,
+     data:{
+     },
   },
-
+  musicData:function(e){
+    this.setData({
+      data:e.detail
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

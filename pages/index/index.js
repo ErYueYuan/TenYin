@@ -14,7 +14,16 @@ Page({
       second:0,
       playState:false,
       audioIndex:0
+    },
+    data:{
+
     }
+  },
+  musicData(e){
+    console.log(e);
+    this.setData({
+      data:e.detail
+    })
   },
   // 事件处理函数
   bindViewTap() {
@@ -23,15 +32,7 @@ Page({
     })
   },
   //播放音频
-  player(){
-     wx.request({
-       url: 'http://localhost:3000/users',
-       method:'GET',
-       success(res){
-         console.log(res);
-       }
-     })
-  },
+ 
   back() {
     wx.navigateBack({
       delta: 1

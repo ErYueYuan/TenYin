@@ -1,9 +1,0 @@
-<include src="../../compoents/toast_text/toast.wxml" />
-<!-- <include src="../../compoents/toast_notice/toast.wxml" /> -->
-<view class="logo">
-	<image src="https://upload-10051630.cos.ap-shanghai.myqcloud.com/static/userVc/dlrpic/logo.png"></image>
-</view>
-<view class="title">懒掌柜</view>
-<input type="number" placeholder="请输入工号或手机号" bindblur="userBlur" value="{{username}}" class="account"></input>
-<input placeholder="请输入密码" bindblur="passBlur" bindinput="passInput" password="true" value="{{password}}" class="password"></input>
-<view class="bind_btn" bindtap="bindLogin">绑定登录</view>

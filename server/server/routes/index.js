@@ -26,8 +26,13 @@ router.get('/getMusic',function (req,res){
    let result = {
      status:"success",
      data:Mock.mock({
-       'mockContent|1': ['角色精湛主题略荒诞', '理由太短 是让人不安', '疑信参半 却无比期盼', '你的惯犯 圆满', '别让纠缠 显得 孤单'],
-     }),
+        'musicList|10':[{
+          'Content|1': ['角色精湛主题略荒诞', '理由太短 是让人不安', '疑信参半 却无比期盼', '你的惯犯 圆满', '别让纠缠 显得 孤单'],
+          'name|1':['刘德华','张学友','朴树','王力宏','周杰伦'],
+          'url|1':['http://121.196.46.103:8080/music/1.mp3']
+        }]
+     }
+     ),
      msg:'查询歌曲成功'
    }
    res.json(result);
