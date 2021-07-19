@@ -1,12 +1,24 @@
+
 var express = require('express');
 var router = express.Router();
 var Mock =  require('mockjs');
+var multer = require('multer');
+var fs = require('fs');
 
 /* GET home page. */
 // router.get('/', function(req, res, next) {
 //   res.render('index', { title: 'Express' });
 //   res.send(JSON.stringify(data))
 // });
+
+//单文件上传,使用multer上传模块  dest文件保存根目录，file返回属性对象,单文件上传
+router.post('/upload',multer({dest:'upload'}).single('file'),function(req,res){
+    //返回的一个随机码的文件名，通过fs模块  更改路径renameSync(原路径,新路径)
+    fs.renameSync(req.file.path,`upload/${req.file.originalname}`)
+    console.log(req.file);
+    
+    res.send(req.file)
+})
 router.post('/getData',function (req,res,next){
   let  resutl  = {
     status:'success',

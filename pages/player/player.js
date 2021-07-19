@@ -14,6 +14,25 @@ Page({
       data:e.detail
     })
   },
+  uploadBtn(){
+    wx.chooseImage({
+      success(res){
+        console.log(res);
+        const filepath = res.tempFilePaths;
+        wx.uploadFile({
+          filePath: filepath[0],
+          name: 'file',
+          url: 'http://localhost:3000/upload',
+          header: {  
+            "Content-Type": "multipart/form-data"  
+          },  
+          success(res){
+            console.log(res);
+          }
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
