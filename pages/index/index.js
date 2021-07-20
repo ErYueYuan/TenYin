@@ -1,7 +1,8 @@
 // index.js
 // 获取应用实例
 const app = getApp()
-
+let routes = getCurrentPages();
+console.log(routes);
 Page({
   data: {
     motto: 'Hello World',
@@ -15,14 +16,14 @@ Page({
       playState:false,
       audioIndex:0
     },
-    data:{
-
+    dataMusic:{
     }
   },
   musicData(e){
-    console.log(e);
+    app.globalData.musicState = true;
+    console.log(app.globalData.musicState);
     this.setData({
-      data:e.detail
+      dataMusic:e.detail
     })
   },
   // 事件处理函数

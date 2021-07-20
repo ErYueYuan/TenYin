@@ -34,8 +34,9 @@ app.use('/users', usersRouter);
 
 // //允许跨域
 app.use(function (req,res,next) {
-  res.header("Access-Control=Allow-Origin","*");
-  res.header("Access-Control-Allow-Headers","Origin, X-Requested-With , Content-Type , Accept");
+  res.header("Access-Control-Allow-Origin:*");
+  res.header("Access-Control-Allow-Methods:GET, POST, OPTIONS, DELETE");
+  res.header("Access-Control-Allow-Headers:DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type, Accept-Language, Origin, Accept-Encoding");
   next();
 })
 // catch 404 and forward to error handler

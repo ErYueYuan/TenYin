@@ -10,13 +10,15 @@ Component({
       type: Object,
       value: {},
       observer: function (newVal, oldVal) {
+        console.log(newVal,oldVal);
         return newVal;
       }
     }
   },
-
   attached() {
-
+    console.log(app.globalData.musicState);
+    let routes = getCurrentPages();
+console.log(routes);
   },
   /**
    * 组件的初始数据
@@ -27,13 +29,18 @@ Component({
     audioSrc: "",
     title:'',
     name:'',
-    musicState:app.globalData.musicState
-    
-
+    musicState:''
   },
   observers:{
     'dataItem':function(val){
       console.log(val);
+      this.setData({
+        status:false,
+        title:val.Content,
+        name:val.name,
+        audioSrc:val.url,
+        musicState:app.globalData.musicState
+      })
       this.play(val)
     },
   },
@@ -43,15 +50,16 @@ Component({
   methods: {
     play(val) { 
       console.log(this.data);
+      if(!val)return;
       vm.src = val.url
       vm.play();
-      app.globalData.musicState = true;
       console.log(app.globalData.musicState);
-      this.setData({
-        status:false,
-        title:val.Content,
-        name:val.name
-      })
+      // this.setData({
+      //   status:false,
+      //   title:val.Content,
+      //   name:val.name,
+      //   audioSrc:val.url
+      // })
       console.log(this.data);
       
       vm.onPause(() => {

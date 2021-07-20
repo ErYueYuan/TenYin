@@ -41,4 +41,4 @@
   </view>
 </view>
 <music bind:getMusic="musicData"></music>
-<audio  dataItem="{{data}}"></audio>
+<audio  dataItem="{{dataMusic}}"></audio>

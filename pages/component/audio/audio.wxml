@@ -1,5 +1,5 @@
 <!--pages/component/audio/audio.wxml-->
-<view class="audio-container" wx:if="{{dataItem.url && musicState}}">
+<view class="audio-container" wx:if="{{musicState}}">
    <view class="audio-img posi2">
     <image src="../../asstes/image/a1iap11nnhb.jpg" class="audio-head {{status?'':'rotate-img'}}"></image>
    </view>
