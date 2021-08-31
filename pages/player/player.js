@@ -22,7 +22,7 @@ Page({
         wx.uploadFile({
           filePath: filepath[0],
           name: 'file',
-          url: 'http://localhost:3000/upload',
+          url: 'http://localhost:3001/upload',
           header: {  
             "Content-Type": "multipart/form-data"  
           },  

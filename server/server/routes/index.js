@@ -4,7 +4,11 @@ var Mock = require('mockjs');
 var multer = require('multer');
 var fs = require('fs');
 var db = require('../mysql')
-
+//使用os模块获取主机信息
+const os = require('os');
+var localhost="";
+var network = os.networkInterfaces()
+localhost = network[Object.keys(network)[0]][0].address
 /* GET home page. */
 // router.get('/', function(req, res, next) {
 //   res.render('index', { title: 'Express' });
@@ -12,15 +16,15 @@ var db = require('../mysql')
 // });
 //单文件上传,使用multer上传模块  dest文件保存根目录，file返回属性对象    单文件上传
 router.post('/upload', multer({
-  dest: 'upload'
+  dest: 'public/images'
 }).single('file'), function (req, res) {
   //返回的一个随机码的文件名，通过fs模块  更改路径renameSync(原路径,新路径)
-  fs.renameSync(req.file.path, `upload/${req.file.originalname}`)
   console.log(req.file);
+  fs.renameSync(req.file.path, `public/images/${req.file.originalname}`)
   let post = [
     req.file.fieldname,
     'ceshi', 
-    req.file.path
+    `http://${localhost}/public/images/${req.file.originalname}`
   ]
   const query = 'INSERT INTO music_db.music(name,m_name,url) VALUES(?,?,?)';
   db.query(query, post, (err, result) => {
@@ -32,10 +36,19 @@ router.post('/upload', multer({
     }
   })
 })
-// router.post('/arrUpload',upload.array('logo',5),function(req,res){
-//   console.log(res);
-//   console.log(req.logo);
-// })
+//多传
+router.post('/arrUpload',multer({
+  dest: 'upload'
+}).array('logo',5),function(req,res){
+  console.log(res);
+  console.log(req.logo);
+})
+//查看静态资源
+router.post('/upload/:filename',function(req,res,next){
+   const name = req.params.filename;
+   const path = `/upload/${name}`;
+   
+})
 router.post('/getData', function (req, res, next) {
   let resutl = {
     status: 'success',

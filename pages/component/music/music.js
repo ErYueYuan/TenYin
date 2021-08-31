@@ -28,7 +28,7 @@ Component({
    getData(){
      let that = this;
     wx.request({
-      url: 'http://localhost:3000/getMusic',
+      url: 'http://49.232.154.119:3000/getMusic',
       method:'GET',
       success(res){
         console.log(res.data);
