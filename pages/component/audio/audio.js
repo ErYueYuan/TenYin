@@ -41,7 +41,7 @@ console.log(routes);
         audioSrc:val.url,
         musicState:app.globalData.musicState
       })
-      this.play(val)
+      // this.play(val)
     },
   },
   /**

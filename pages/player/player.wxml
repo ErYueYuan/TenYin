@@ -9,8 +9,11 @@
    <view class="title-three">后语</view>
   <view class="upload-btn" bindtap="uploadBtn"> 
   上传文件
-  </view>
+  </view> 
+    <view class="upload-btn" bindtap="uploadCors"> 
+  上传音频
+  </view> 
  </view>
 </view>
 <music bind:getMusic="musicData"></music>
-<audio dataItem="{{data}}"></audio>
+<!-- <audio dataItem="{{data}}"></audio> -->

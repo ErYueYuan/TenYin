@@ -22,13 +22,14 @@ Component({
    */
   methods: {
     player(e){
+      console.log(e)
       let item = e.currentTarget.dataset.item
       this.triggerEvent('getMusic',item)
    },
    getData(){
      let that = this;
     wx.request({
-      url: 'http://49.232.154.119:3000/getMusic',
+      url: 'http://49.232.154.119:3001/getMusic',
       method:'GET',
       success(res){
         console.log(res.data);
