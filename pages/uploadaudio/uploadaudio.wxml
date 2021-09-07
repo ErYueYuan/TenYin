@@ -1,0 +1,33 @@
+<!--pages/uploadaudio/uploadaudio.wxml-->
+<van-cell-group>
+  <van-field
+  model:value="{{ name }}"
+    placeholder="请输入名字"
+    label="歌手"
+    bind:change="onChange"
+    custom-style="font-size:15px;"
+  />
+  <van-field
+  model:value="{{ musicName }}"
+    placeholder="请输入歌曲名"
+    label="歌曲名"
+    bind:change="onChange"
+    custom-style="font-size:15px;"
+  />
+</van-cell-group>
+<view class="upload-box">
+  <view class="upload-img">
+     <text>上传图片</text>
+     <view class="img-box" bindtap="uploadImg">
+      <van-icon name="plus" size="40" custom-style="position:absolute;top:50%;transform:translateY(-50%);"/>
+     </view>
+  </view>
+  <view class="upload-img">
+     <text>上传音频</text>
+     <view class="img-box" bindtap="uploadAudio">
+      <van-icon name="plus" size="40" custom-style="position:absolute;top:50%;transform:translateY(-50%);"/>
+     </view>
+  </view>
+  <view class="submit-btn" bindtap="submitFile">提交</view>
+  <van-toast id="van-toast" />
+</view>

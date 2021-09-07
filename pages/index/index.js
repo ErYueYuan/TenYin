@@ -32,6 +32,12 @@ Page({
       url: '/pages/player/player?user=1&id=0'
     })
   },
+  //跳转上传页面
+  goUpload(){
+    wx.navigateTo({
+      url: '/pages/uploadaudio/uploadaudio',
+    })
+  },
   //播放音频
  
   back() {

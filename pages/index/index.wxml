@@ -1,6 +1,9 @@
 <!-- index.wxml -->
 <view class="container">
+<view class="header-search">
   <van-search value="{{ value }}" shape="round" placeholder="请输入歌名，歌手" />
+  <text bind:tap="goUpload">上传</text>
+</view>
   <view class="userinfo">
     <swiper indicator-dots="true" indicator-color="rgba(255,255,255,.3)" indicator-active-color="#DD001B"
       previous-margin="10" next-margin="10">

@@ -29,6 +29,12 @@
           "pathName": "pages/player/player",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/uploadaudio/uploadaudio",
+          "pathName": "pages/uploadaudio/uploadaudio",
+          "query": "",
+          "scene": null
         }
       ]
     }

@@ -2,11 +2,12 @@
   "pages": [
     "pages/index/index",
     "pages/player/player",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/uploadaudio/uploadaudio"
   ],
   "tabBar": {
-    "color":"#000000",
-    "selectedColor":"#e53d81",
+    "color": "#000000",
+    "selectedColor": "#e53d81",
     "list": [
       {
         "pagePath": "pages/index/index",
@@ -33,11 +34,13 @@
     "van-icon": "@vant/weapp/icon/index",
     "van-row": "@vant/weapp/row/index",
     "van-col": "@vant/weapp/col/index",
-    "van-search":"@vant/weapp/search/index",
+    "van-search": "@vant/weapp/search/index",
     "navbar": "/pages/component/navbar/navbar",
     "footer": "/pages/component/footer/footer",
-    "music":"/pages/component/music/music",
-    "audio":"/pages/component/audio/audio"
+    "music": "/pages/component/music/music",
+    "audio": "/pages/component/audio/audio",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-field": "@vant/weapp/field/index"
   },
   "window": {
     "backgroundTextStyle": "light",

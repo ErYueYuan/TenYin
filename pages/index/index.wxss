@@ -2,6 +2,21 @@
 image {
   width: 100%;
 }
+.header-search {
+  padding-right: 50rpx;
+  position: relative;
+}
+.header-search input {
+  font-size: 28rpx;
+}
+.header-search text {
+  position: absolute;
+  right: 10rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 28rpx;
+  color: #ffaf53;
+}
 .userinfo {
   height: 400rpx;
   width: 100%;
@@ -116,4 +131,23 @@ image {
 }
 .motto-box {
   width: 95%;
+}
+.recommend {
+  padding: 20rpx 50rpx;
+}
+.recommend .recommed-child {
+  margin-bottom: 20rpx;
+  display: flex;
+}
+.recommend .recommed-child view {
+  flex: 1;
+  line-height: 70rpx;
+}
+.recommend .recommed-child .t-image {
+  text-align: right;
+}
+.recommend .recommed-child image {
+  width: 70rpx;
+  height: 70rpx;
+  vertical-align: middle;
 }
