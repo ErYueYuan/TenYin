@@ -15,6 +15,9 @@ Page({
     url:"",
     audioUrl:""
   },
+  onChange(val){
+    console.log(val);
+  },
   //上传图片
   uploadImg() {
     let that = this;
@@ -71,11 +74,7 @@ Page({
     let that = this;
     let name = that.data.FileName;
     let file = that.data.Filepath;
-    if (!name || !file) {
-      Toast('乱来，上传图片或音频啊~~~~~~~');
-      return;
-    }
-    console.log(name, file);
+    console.log(name,file);
     const cos = new COS({
       getAuthorization: function (options, callback) {
         console.log("cos签名", options, callback);
@@ -103,7 +102,8 @@ Page({
         })
       }
     })
-    let originName = that.data.fileOrgin == 0? "upload/img": "upload/audio";
+    let originName = that.data.fileOrgin == 0? "/upload/img/": "/upload/audio/";
+    console.log(originName,name);
     cos.postObject({
       Bucket: 'ym-1301900579',
       /* 必须 */
@@ -115,21 +115,36 @@ Page({
         console.log(JSON.stringify(progressData));
       },
     }, function (err, data) {
-      that.data.url = "http://" + data.Location;
+      console.log(err,data);
+      if(that.data.fileOrgin==0){
+        that.setData({
+          url:"http://" + data.Location
+        })
+      }else{
+        that.setData({
+          audioUrl:"http://" + data.Location
+        })
+      }
       console.log(err, data);
-
     })
   },
   //提交
   submitFile(){
+    let that = this;
+    console.log(this.data);
+    let {name,musicName,url,audioUrl} = that.data;
+    if (!name||!musicName||!url||!audioUrl) {
+      Toast('乱来，上传图片或音频啊~~~~~~~');
+      return;
+    }
     wx.request({
-      url: 'http://localhost:3001/uploadAudioMsg',
+      url: 'http://49.232.154.119:3001/uploadAudioMsg',
       method: 'POST',
       data: {
         name: that.data.name,
         musicName: that.data.musicName,
         url: that.data.url,
-        audioUrl:that.data.aUrl
+        audioUrl:that.data.audioUrl
       },
       success(res) {
         console.log(res);
