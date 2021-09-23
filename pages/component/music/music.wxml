@@ -1,12 +1,13 @@
 <!--pages/component/music/music.wxml-->
 <view class="recommend">
+  <image bindtap="downUrl" src="../../asstes/icon/xiazai.png"></image>
      <view class="recommed-child" wx:for="{{list}}" wx:key="index">
        <view class="t-index">{{index+1}}</view>
        <view class="t-name t-left">{{item.Content}}<text class="t-smallN f4 c3">-{{item.name}}</text></view>
-       <view class="t-image t-right">
+       <view class="t-image t-right"> 
        <image bindtap="player" data-item="{{item}}"   wx:if="{{status}}" src="../../asstes/icon/bofang.png"></image>
        <image bindtap="player(item)" wx:else src="../../asstes/icon/ting.png"></image>
-       <image bindtap="downUrl(item)" src="../../asstes/icon/xiazai.png"></image>
+       <image bindtap="downUrl"  data-item="{{item}}" src="../../asstes/icon/xiazai.png"></image>
        </view>
      </view>
   </view>
